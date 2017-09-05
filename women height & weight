@@ -9,7 +9,7 @@ y <- mean(womendf$weight)
 x
 y
 d <- 0
-for (i in nrow(womendf))
+for (i in 1:nrow(womendf))
 {
   if
   (womendf$height[i]>x & womendf$weight[i]<y)
