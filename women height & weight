@@ -1,0 +1,23 @@
+install.packages("data.table")
+install.packages("datasets")
+library(datasets)
+womendf <- women
+View(womendf)
+x <- mean(women$height)
+x <- mean (womendf$height)
+y <- mean(womendf$weight)
+x
+y
+d <- 0
+for (i in nrow(womendf))
+{
+  if
+  (womendf$height[i]>x & womendf$weight[i]<y)
+{
+    d <- d+1
+  }
+}
+
+print("the number of women who satisfy the criteria is")
+d
+
