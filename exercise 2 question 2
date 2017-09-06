@@ -6,8 +6,8 @@ match_data="https://en.wikipedia.org/wiki/India%E2%80%93Pakistan_cricket_rivalry
 match_table=html_nodes(match_data,"table")
 final<-html_table(match_table[2],fill= TRUE)
 View(final)
-match_df=as.data.frame(matches_table_final)
+match_df=as.data.frame(final)
 View(match_df)
-match_df$total_win=match_df$Test+match_df$ODI+match_df$T20I
+match_df$total_wins=match_df$Test+match_df$ODI+match_df$T20I
 India_wins<-match_df[3,5]
 View(India_wins)
